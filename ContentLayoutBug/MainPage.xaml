@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="ContentLayoutBug.MainPage">
+    <Grid
+        RowSpacing="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Button
+            x:Name="ButtonWithContentLayout"
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            ContentLayout="Right,10"
+            Text=""
+            ImageSource="icon_calendar_selector"/>
+
+        <Button
+            Grid.Row="2"
+            HorizontalOptions="Center"
+            Text="Change Text"
+            Clicked="OnChangeText"/>
+    </Grid>
+</ContentPage>
